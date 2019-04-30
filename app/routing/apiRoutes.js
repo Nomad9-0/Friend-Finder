@@ -1,12 +1,18 @@
+// Dependencies
+var path = require('path');
+var friends = require('../data/friends.js');
+
 // API Routes
-app.get("/api/tables", function(req, res) {
-    res.json(friends);
-});
+module.exports = function(app) {
+	// All Friends
+	app.get('/api/friends', function(req, res) {
+		res.json(friends);
+	});
 
-app.post("/api/friends", function(req, res) {
-    friends.push(req.body);
-    res.json(true);
-});
-
-module.exports = apiRoutes;
-  
+	// Add new friend
+	app.post('/api/friends', function(req, res) {
+		// Add new user
+		friends.push(userInput);
+		res.json({status: 'OK', matchName: matchName, matchImage: matchImage});
+	});
+};
