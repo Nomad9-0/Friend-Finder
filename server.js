@@ -15,7 +15,7 @@ require(path.join(__dirname, './app/routing/apiRoutes'))(app);
 require(path.join(__dirname, './app/routing/htmlRoutes'))(app);
 
 // Access CSS files
-app.use(express.static(path.join(__dirname, './app/public')));
+app.use(express.static(path.join(__dirname, './app/public/survey.html')));
 
 // Starts the server to begin listening
 app.listen(PORT, function() {
