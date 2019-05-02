@@ -222,10 +222,9 @@
 
 			// Add user inputs to friends
 			$.post('/api/friends', userInput).then(function(data)  {
-      			// console.log('response = ' + JSON.stringify(data));
       			// Set the name and image values of friend match
       			$('#match-name').text(data.matchName);
-		    	$("#match-img").attr("src", data.matchPhoto);
+		    	$("#match-img").attr("src", data.matchPhoto); // not working need to fix
 		    	// Open the modal
       			$('#results-modal').modal('open');
             });
